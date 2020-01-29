@@ -1,0 +1,323 @@
+/*---サイト基本設定---*/
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6, object,
+iframe, pre, code, p, blockquote,
+form, fieldset, legend, table, th,
+td, caption, tbody, tfoot, thead,
+article, aside, figure, footer, header,
+hgroup, menu, nav, section, audio, video,
+canvas{
+    padding: 0 0;
+    margin: 0 0;
+    font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration-line: none;
+}
+/*----------全画面共通----------*/
+
+.container{
+    width: 100vw;
+    height:100vh;
+}
+
+/*divの横並び*/
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.p_button{
+    display: block;
+    cursor: pointer;
+    margin: 20px 20px;
+    padding: 9px 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.back{
+    background-color: #293b6a;
+    color: #f0f0f0;
+}
+
+.call{
+    background-color: darkorange;
+    color: #f0f0f0;
+}
+
+.comp{
+    background-color: forestgreen;
+    color: #f0f0f0;
+}
+
+.all_number_reset{
+    background-color: deeppink;
+    color: #f0f0f0;
+}
+/*----------トップ--------------*/
+
+.top_title_contents{
+    height: 50%;
+    width: 100%;
+}
+
+.top_title{
+    text-align: center;
+    line-height: 50vh;
+    font-size: 7vw;
+}
+
+.top_menu_contents{
+    text-align: center;
+    height: 50%;
+}
+/*----------コンソール----------*/
+/*トップメニューがわ*/
+.console_top_header{
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    top: 0;
+    z-index: 10;
+}
+/*表示コンテナ*/
+.console_container{
+    /*トップメニューの分幅を持たせる*/
+    padding-top: 10vh;
+    height: 90vh;
+}
+.console_top_menu{
+    line-height: 3;
+}
+/*トップメニュー項目*/
+.console_top_menu li{
+    float:left;
+}
+/*待ち番号表示区域*/
+.waiting_number_contents{
+    height: 45vh;
+}
+
+.waiting_number_title{
+    height: 4vh;
+}
+
+.waiting_number_display_area{
+    height: 40vh;
+}
+/*ゲットしてきた番号部分*/
+.w_n_cont{
+    text-align: center;
+    line-height: 20vh;
+    font-size: 7vw;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+}
+
+/*呼び出し番号表示区域*/
+.calling_number_contents{
+    height: 45vh;
+}
+
+.calling_number_title{
+    height: 5vh;
+}
+
+.calling_number_display_area{
+    height: 40vh;
+}
+
+.n_c_cont{
+    text-align: center;
+    line-height: 20vh;
+    font-size: 7vw;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+}
+
+.n_c{
+    width: 12%;
+    height: 50%;
+    border: 1px solid;
+    position: relative;
+}
+
+.n_c::before{
+    padding-top: 100%;
+}
+/*----------モーダル------------*/
+/*モーダルじゃない所の背景*/
+.modal{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+}
+/*モーダルウィンドウ*/
+.modalcontent{
+    background-color: #fdfdfdee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70%;
+    height: 100%;
+    filter: drop-shadow(0px 8px 14px #4d4d4d);
+    text-align: center;
+}
+
+.verify{
+    width: 60%;
+    height: 60%;
+}
+
+.modalbody{
+    height: 100%;
+    width: 100%;
+    line-height: 9vh;
+}
+
+.number_contents{
+    width: 100%;
+    height: 50%;
+}
+
+.no{
+    width: 40%;
+    text-align: center;
+    line-height: 50vh;
+    font-size: 19vw;
+}
+
+.target_number{
+    width: 60%;
+    text-align: center;
+    line-height: 50vh;
+    font-size: 25vw;
+}
+/*---------閉店リセット--------*/
+.verify_modal{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+}
+/*---------番号表示版----------*/
+/*表示板コンテナ*/
+.display_container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+}
+/*待ち番号表示区域*/
+.wait_display {
+    width: 50%;
+    height: 100vh;
+}
+/*呼び出し表示区域*/
+.call_display {
+    width: 50%;
+    height: 100vh;
+}
+/*表示エリアのタイトル*/
+.display_title{
+    width: 100%;
+    height: 5vh;
+    border: 1px solid #111111;
+}
+/*待ちの番号表示エリア*/
+.wait_number_display{
+    width: 100%;
+    height: 95vh;
+}
+/*呼び出しの番号表示エリア*/
+.call_number_display{
+    width: 100%;
+    height: 95vh;
+}
+/*待ちの番号表示部分*/
+.wait_number_content {
+    width: 100%;
+    height: 11.7%;
+    border: 1px solid #000000;
+    text-align: center;
+    line-height: 12vh;
+    font-size: 12vh;
+}
+
+.call_number_content{
+    width: 100%;
+    height: 11.7%;
+    border: 1px solid #000000;
+    text-align: center;
+    line-height: 12vh;
+    font-size: 12vh;
+}
+
+.notice {
+    width: 83%;
+    height: 93%;
+}
+
+.noticeline{
+    line-height: 30vh;
+}
+
+.notice_modal{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+}
+
+.display_number {
+    font-size: 43vh;
+}
+/*---------番号チケット--------*/
+
+.number_display{
+    text-align: center;
+    height: 60vh;
+    font-size: 26vw;
+    line-height: 65vh;
+}
+
+.status_display {
+    text-align: center;
+    font-size: 5vh;
+}
+
+/*---------レスポンシブ--------*/
